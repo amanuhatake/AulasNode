@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title> Pagina da aula 01</title>
+		<script>
+			//console.log("LEC > Operário!"); //acessando função, passando parametros 
+
+			//Variáveis 
+			//Variavel pode ser atualizada, pode ser redeclarada
+			var fruta; 
+			fruta = "Abacaxi"; //entede aspas duplas e aspas simples, pq não tem variavel char. Padronizar código
+			console.log(fruta);
+
+			fruta = "Morango"; 
+			console.log(fruta);
+
+			var fruta = "Limão";
+			console.log(fruta); // redeclaração de variável 
+
+
+			//Variavel pode ser atualizada, mas nao redeclarada
+			let professor; 
+			professor = "Helton";
+			console.log(professor);
+
+			professor = "Joao Victor";
+			console.log(professor);
+
+			//Erro, não pode redeclarar let
+			//let professor;
+
+			//Precisa atribuir valor 
+			const IDADE = 18; // Colocar em maisculo a variavel const, é uma boa prática
+			console.log("Idade: ", IDADE); //concatenação com VIRGULA OU MAIS (, +)
+
+			//IDADE = 19; // nao pode alterar valor de const e nem redeclarar
+			//console.log("Idade correta: " + IDADE);
+
+			// se nao declarar qual variavel é, ela vai entender como var, não é necessidade de ser explicito. 
+			bebida = "Água";
+			console.log(`Bebida: ${bebida}`); //criando String e variavel, e concatenando com ${} dentro de crase
+			bebida2 = "Tequila";
+
+			bebidaTomada = `${bebida} gelada ${bebida2}`;
+			console.log(bebidaTomada);
+
+			const ALUNO ={
+				nome: "Maria",
+				idade: 20
+			};
+			console.log(ALUNO);  // mostra o conteudo dentro do objeto que pode ser alterado, O CONTEÚDO DENTRO. 
+
+			let nome = "Manu"; //String
+			let idade = 25; // number
+			let estudando = true; //boolean 
+			let vazio = null; //null
+			let indefinido; //indefinida
+			console.log(nome, idade, estudando, vazio, indefinido);
+
+			//garantindo que if sempre irá funcionar
+			if(true){
+				//Camel Case
+				var varVariable = "Eu sou uma VAR";
+				let letVariable = "Eu sou uma LET"; // quando você declara essa variavel dentro desse bloco, ela não pode ser acessada de fora. 
+				const CONSTVARIABLE = "Eu sou uma const"; // BOA PRATICA DEIXAR EM MAIUSCULO O NOME DA CONST 
+			}
+
+			console.log(varVariable);
+			//console.log(letVariable); erro variavel let, variavel let nao pode ser acessada fora do bloco
+			//console.log(CONSTVARIABLE); erro variavel const, variavel const nao pode ser acessada fora do bloco
+
+
+			/* DADOS PRIMITIVOS 
+			String : "Hello, WORLD!" - Texto em aspas 
+			Number: 42 ou 3.14 - Inteiros ou decimais
+			Boolean: true ou false - Representa um valor lógico.
+			undefined: Uma variável declarada mas não atribuída a um valor.
+			null: Um valor numo que indica ausência de valor.
+			Symbol: Um valor único que não é igual a qualquer outro valor >> não é utilizado. 
+			BigInt: Números inteiros maiores que 2 elevado a 53 -1 >> utiliza em software muito grande que int não suportaria. 
+			*/
+
+			let variavelManu;
+			//console.log(typeof variavelManu); //mostra o tipo da variavel typeof
+
+			//Tipagem dinâmica e fraca, regra: se tiver um único tipo de valor ele mostra o tipo, se for mais de um valor diferente ele pega o que convem (concatenação)
+			variavelManu = "Muito inteligente";
+			console.log(typeof variavelManu);
+			variavelManu = 25;
+			console.log(typeof variavelManu);
+			variavelManu = true; 
+			console.log(typeof variavelManu);
+
+			/*DADOS NÃO PRIMITIVOS
+			Objetos que podem armazenar coleções de dados ou mais complexidades, posso colocar dados primitivos, objetos e objetos dentro de objetos e arrays.
+
+			Objeto: {name: "Alice", age:30} 
+			Arrays: [1,2,3];
+			*/
+
+
+
+		</script>
+		
+	</head>
+	<body>
+		<h1>Exercios JavaScript , fixação variáveis!</h1>
+	</body>
+
+
+</html>
