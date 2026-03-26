@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>Aula 03</title>
+        <script>
+            //objeto , chave e valor, acessar propriedades desse objeto
+            //Variável do tipo objeto
+            let pessoa = {
+                nome: "Manu", //propriedade chave seria nome com valor Manu exemplo
+                idade: 25,
+                profissao: "Analista",
+                salario_mes: 50000.00,  //seguir padrao americano, não separar por virgula
+                cabeluda: false
+
+            };
+
+            //acessa o objeto por completo
+            console.log("Tipo: "+ typeof pessoa);
+            console.log("Valor: ", pessoa);
+
+            console.log("Nome: ", pessoa.nome); //acessar o valor
+            console.log("Idade: ", pessoa.idade); //acessar o valor
+            console.log("Profissao: ", pessoa.profissao); //acessar o valor
+            console.log("Salario: ", pessoa.salario_mes); //acessar o valor
+            
+            //atualizando dados
+            pessoa.salario_mes = 97125.42;
+            console.log("Salário Atualizado: " , pessoa.salario_mes);
+
+            //objeto professores
+            let curso = {
+                nome_curso: "ADS",
+                coordenador: pessoa,
+                instituicao: "UP"
+            };
+
+            console.log(curso);
+
+            //Variavel do tipo array 
+            // OBJETO SEMPRE SERA ENTRE CHAVES {} E UM ARRAY É SEMPRE POR COLCHETE []
+            let professores = [
+                // "S1", 123, true, pode ter varios tipos de dados primitivos e não primitivos como objeto 
+
+                {nome: "Manu", materia: "Java", salario: 40231.90},
+                {nome: "Joao Victor", materia: "Algoritmo", salario: 300452.12},
+                {nome: "Thiago Detoni", materia: "Banco de Dados", salario: 300452.12},
+            ];
+
+            //Array sempre começa no zero
+            console.log("Tipo: ", typeof professores); //mostra o tipo do array 
+            console.log("Valor: ", professores);
+            console.log("Professor 2: ", professores[1]); //acessando objeto dentro do array 
+
+            //acessando objeto e array 
+            curso.professores = professores; 
+            console.log("Curso Final: ", curso);
+            console.log("Salario do Detoni: ", curso.professores[2].salario);
+
+            //JSONM arquivo escrito 
+            // Padrao de API REST (padrao de comunicação na WEB, cliente e servidor, 2 camadas), tendo como objeto principal JSONM
+
+            //Criando uma função com nome saudacao
+            let = sauda = function saudacao(){ //pode ter uma variavel que pode ser uma function 
+                console.log("Olá, seja bem vindo");
+
+            }
+            //saudacao(); //executando a função saudacao 
+            //console.log("Tipo: ", typeof saudacao);
+            console.log("Tipo de sauda: ", typeof sauda);
+
+            function cumprimenta(nome = "Anônimo"){ //sempre colocar valores default (padrao) para nao quebrar a aplicação
+                console.log(`Boa noite ${nome}, bem vindo a uma aula TOP!`);
+            }
+
+            //cumprimenta("Manu"); //passando parametros para a função 
+            cumprimenta();
+
+            //TIPAGEM DINAMICA E CAST (CONVERSÃO DE VALORES)
+            let fruta = "Abacaxi";
+            console.log("Tipo: ", typeof fruta);
+            fruta = "Maça" + 123;
+            console.log("Tipo: ", fruta);
+
+            //CONCATENAÇÃO COM STRING VIRA STRING
+            //EXEMPLO CAST IMPLÍCITO
+            let idade = 22;
+            console.log("Tipo idade: ", typeof idade);
+            idade = 23 + "anos";
+            console.log("Novo tipo idade, ", typeof idade);
+
+            //CAST explicito
+            let preco = 45.99;
+            console.log("Tipo de preço ", typeof preco);
+            let precoConvertido = String(preco); //Explicito pq está aqui escrito STRING
+            console.log("Novo tipo de preço: ", typeof precoConvertido);
+
+            let dia = 23 + "";
+            console.log ("Tipo de dia: ", typeof dia);
+            diaMes = Number(dia); //Explicito pq está aqui escrito NUMBER
+            console.log("Tipo do dia mes: ", typeof diaMes);
+            console.log("Dia mes: ", diaMes); //NaN, not a number, valor que não é um número, era para ter um número 
+        
+            //COMPARAÇÃO 
+
+            if("5" == 5){//só comparando valor
+                console.log("5 String é igual a 5 número");
+            }
+
+            if("5" === 5){ //tipo e valor
+                console.log("5 String é estritamente igual a 5 números");
+            }
+
+            if(!true){ //não é verdadeiro
+                console.log("É verdadiro");
+            }else{
+                console.log("Não é verdadeiro");
+            }
+
+            //TESTANDO COMPARAÇÃO com if e else
+            const CARRO = "Punto";
+             if(CARRO ==="Punto"){
+                console.log("Marca: Fiat");
+            }else if(CARRO === "Corsa"){
+                console.log("Marca: GM ");
+            } else if(CARRO === "Hilux"){
+                console.log("Marca Toyota");
+            }else if(CARRO ==="Panto"){
+                console.log("Marca GTA");
+            };
+
+            for(let i =1; i<=50; i++){
+                
+                if(i === 15){
+                    continue; //vai para a proxima, continua 
+                }
+
+                console.log("Valor de i: ", i);
+                if(i === 20){
+                    break; //saída, finalização do laço, quebra
+                }
+            };
+
+            let j = 10;
+            for(;;){
+                if(j <= 5) break;
+                    console.log("O valor de J: ", j);
+                    j--
+                };
+                
+            
+            let k = 1;
+            while(k <= 10){
+                console.log("Valor de K: ", k);
+                k++;
+            }
+           
+        </script>
+    </head>
+
+    <body>
+        <h3>Aula #03</h3>
+    </body>
+</html>
