@@ -1,0 +1,60 @@
+<html lang="pt-br">
+    <head>
+        <title>Aula 03</title>
+        <script>
+            let jsconString = "Eu sou um JSON";
+            //let jsconString = `[{"id":"1","name":"Helton"}]`;  aqui dá para converter para um objeto 
+
+            // parse > pega String e transforma em objeto, mas tem que ter estreutura de objeto, ter um {} e etc
+            try{
+            // um JSON para API, faz conversão para objeto
+            //let user = JSON.parse = `[{"id":"1","name":"Helton"}]`;
+            console.log(JSON.stringify(user)); // transforma um objeto em uma string 
+            console.log(`Usuario ${user[1].id}| ${user[1].name}`);
+            }catch(error){ //try sempre tem catch, pode ter varios catch  
+                console.error(`Erro ao converter string em objeto: ${error}`); 
+            }
+            //console.log(`Usuario: ${user}`);
+            console.log("Chegou até aqui!");
+
+            try{ //se algum código pode gerar uma exceção, tem que estar dentro o try catch 
+                console.log("Conectando no banco de dados...");
+                /*Codigo que pode gerar problema*/
+
+                let jsconString2 = "Xpto";
+                let carro = JSON.parse(jsconString2);
+            }catch(error){// trata o erro no catch 
+                console.erros(`Falha ao conectar ao banco: ${error}`);
+                console.log("Conexao realizada com sucesso.");
+            }finally{
+                console.log("Fechando a conexao com o banco de dados!");
+            }
+
+            function verificaMaiorIdade(idade){
+                if(!idade){
+                    throw new Error("O parametro Idade é obrigatrio");
+                }
+                if(idade < 0){
+                    throw new Error("A idade não pode ser negativa!");
+                }
+                if(idade >= 18){
+                    return "É maior de idade";
+                }else{
+                    return "É menor de idade";
+                }
+
+                try{
+                    console.log("19: ", verificaMaiorIdade(19));
+                    console.log("19: ", verificaMaiorIdade(15));
+                    console.log("Nenhum: ", verificaMaiorIdade());
+                    console.log()
+                }
+                
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Aula #03 - Exceções</h1>
+    </body>
+</html>
