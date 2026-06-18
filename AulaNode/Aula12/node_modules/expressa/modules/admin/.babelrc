@@ -1,0 +1,9 @@
+{
+  "sourceType": "module",
+  "presets": [
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@vue/babel-plugin-transform-vue-jsx"
+  ]
+}

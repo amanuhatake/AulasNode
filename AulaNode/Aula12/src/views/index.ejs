@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Lista de Usuários</title>
+    </head>
+
+    <body>
+        <h1>Lista de usuários</h1>
+        <ul>
+            <% usuarios.forEach(usuario =>{%>
+                <li>
+                    <%= usuario.nome %> - <%= usuario.email %>
+                    <a href="/editar/<%=usuario.id %>">[Editar]</a>
+                </li>
+            <%})%>
+        </ul>
+    </body>
+</html>
