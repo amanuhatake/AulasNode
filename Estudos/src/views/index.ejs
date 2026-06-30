@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+
+    <form action="/tarefas/salvar" method="POST">
+        <input type="text" name="titulo" placeholder="Nova Tarefa" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </thead>
+        <tbody>
+            <%= tarefa.forEach(tarefa=>{ %>
+                <tr>
+                    <td><%= tarefa.id_tarefa %></td>
+                    <td><%= tarefa.tarefa %></td>
+                    <td><%= tarefa.status %></td>
+                    <td>
+                        <form action="/tarefas/<%= tarefa.id_tarefa%>/atualizar" method="POST">
+                            <input type="text" name="titulo" value="<%= tarefa.titulo %>" required>
+                            <select name="status">
+                                <option value="Pendente"></option>
+                                <option value="Concluído"></option>
+                            </select>
+                            <button type="submit"> Salvar</button>
+                        </form>
+
+                        <form action="/tarefas/<%= tarefa.id_tarefa %>/excluir" methos = "POST">
+                            <button type="submit">Excluir</button>
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
